@@ -2,9 +2,9 @@
 
 Использование [Monic](https://github.com/kobezzza/Monic) вместе с Grunt.
 
-[![NPM version](https://badge.fury.io/js/grunt-monic.svg)](http://badge.fury.io/js/grunt-monic)
-[![NPM dependencies](https://david-dm.org/kobezzza/grunt-monic.svg)](https://david-dm.org/kobezzza/grunt-monic)
-[![Build Status](https://travis-ci.org/kobezzza/grunt-monic.svg?branch=master)](https://travis-ci.org/kobezzza/grunt-monic)
+[![NPM version](http://img.shields.io/npm/v/grunt-monic.svg?style=flat)](http://badge.fury.io/js/grunt-monic)
+[![NPM dependencies](http://img.shields.io/david/kobezzza/grunt-monic.svg?style=flat)](https://david-dm.org/kobezzza/grunt-monic)
+[![Build Status](http://img.shields.io/travis/kobezzza/grunt-monic.svg?style=flat&branch=master)](https://travis-ci.org/kobezzza/grunt-monic)
 
 ## Установка
 
