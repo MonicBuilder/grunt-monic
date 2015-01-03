@@ -1,64 +1,45 @@
-# grunt-monic
+# [grunt](http://gruntjs.com/)-monic
 
-Использование [Monic](https://github.com/kobezzza/Monic) вместе с Grunt.
+Using [Monic](https://github.com/kobezzza/Monic) with Grunt.
 
 [![NPM version](http://img.shields.io/npm/v/grunt-monic.svg?style=flat)](http://badge.fury.io/js/grunt-monic)
 [![NPM dependencies](http://img.shields.io/david/kobezzza/grunt-monic.svg?style=flat)](https://david-dm.org/kobezzza/grunt-monic)
 [![Build Status](http://img.shields.io/travis/kobezzza/grunt-monic.svg?style=flat&branch=master)](https://travis-ci.org/kobezzza/grunt-monic)
 
-## Установка
+## Install
 
 ```bash
 npm install grunt-monic --save-dev
 ```
 
-После этого плагин необходимо подключить в ваш Gruntfile.js
+## Usage
+
+**Gruntfile.js**
 
 ```js
-grunt.loadNpmTasks('grunt-monic');
-```
+module.exports = function (grunt) {
+	grunt.initConfig({
+		monic: {
+			compile: {
+				options: {
+					flags: {
+						ie: true
+					}
+				},
 
-## Пример
-
-```js
-grunt.initConfig({
-	monic: {
-		compile: {
-			options: {
-				flags: {
-					ie: true
+				files: {
+					'lib.js': ['source/core.js']
 				}
-			},
-
-			files: {
-				'lib.js': ['source/core.js']
 			}
 		}
-	}
+	});
+
+	grunt.loadNpmTasks('grunt-monic');
+	grunt.registerTask('default', ['monic']);
 });
 ```
 
-## [Параметры](https://github.com/kobezzza/Monic#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%B1%D0%BE%D1%80%D1%89%D0%B8%D0%BA%D0%B0-%D0%B8%D0%B7-nodejs)
+## [Options](https://github.com/kobezzza/Monic#%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%B1%D0%BE%D1%80%D1%89%D0%B8%D0%BA%D0%B0-%D0%B8%D0%B7-nodejs)
+## [License](https://github.com/kobezzza/grunt-monic/blob/master/LICENSE)
 
-## Лицензия
-
-The MIT License (MIT)
-
-Copyright (c) 2014 Андрей Кобец (Kobezzza) <kobezzza@mail.ru>
-
-Данная лицензия разрешает лицам, получившим копию данного программного обеспечения и
-сопутствующей документации (в дальнейшем именуемыми «Программное Обеспечение»),
-безвозмездно использовать Программное Обеспечение без ограничений, включая неограниченное право на использование,
-копирование, изменение, добавление, публикацию, распространение, сублицензирование и/или
-продажу копий Программного Обеспечения, также как и лицам, которым предоставляется данное
-Программное Обеспечение, при соблюдении следующих условий:
-
-Указанное выше уведомление об авторском праве и данные условия должны быть включены во все копии или
-значимые части данного Программного Обеспечения.
-
-ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ», БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНО ВЫРАЖЕННЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ,
-ВКЛЮЧАЯ, НО НЕ ОГРАНИЧИВАЯСЬ ГАРАНТИЯМИ ТОВАРНОЙ ПРИГОДНОСТИ, СООТВЕТСТВИЯ ПО ЕГО КОНКРЕТНОМУ НАЗНАЧЕНИЮ И
-ОТСУТСТВИЯ НАРУШЕНИЙ ПРАВ. НИ В КАКОМ СЛУЧАЕ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ПО ИСКАМ О
-ВОЗМЕЩЕНИИ УЩЕРБА, УБЫТКОВ ИЛИ ДРУГИХ ТРЕБОВАНИЙ ПО ДЕЙСТВУЮЩИМ КОНТРАКТАМ, ДЕЛИКТАМ ИЛИ ИНОМУ, ВОЗНИКШИМ ИЗ,
-ИМЕЮЩИМ ПРИЧИНОЙ ИЛИ СВЯЗАННЫМ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ ИЛИ ИСПОЛЬЗОВАНИЕМ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ ИЛИ
-ИНЫМИ ДЕЙСТВИЯМИ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ.
+The MIT License.

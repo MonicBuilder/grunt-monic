@@ -2,7 +2,7 @@
  * grunt-monic
  * https://github.com/kobezzza/grunt-monic
  *
- * Copyright (c) 2014 Kobezzza
+ * Copyright (c) 2014 kobezzza
  * Licensed under the MIT license.
  */
 

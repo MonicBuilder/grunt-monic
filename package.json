@@ -1,12 +1,12 @@
 {
   "name": "grunt-monic",
   "description": "Using Monic with Grunt.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/kobezzza/grunt-monic",
   "author": {
-    "name": "Kobezzza",
+    "name": "kobezzza",
     "email": "kobezzza@mail.ru",
-    "url": "https://github.com/kobezzza/"
+    "url": "https://github.com/kobezzza"
   },
   "repository": {
     "type": "git",
