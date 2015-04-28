@@ -1,8 +1,8 @@
 /*
  * grunt-monic
- * https://github.com/kobezzza/grunt-monic
+ * https://github.com/MonicBuilder/grunt-monic
  *
- * Copyright (c) 2014 kobezzza
+ * Copyright (c) 2014-2015 kobezzza
  * Licensed under the MIT license.
  */
 
@@ -26,10 +26,6 @@ module.exports = function (grunt) {
 
 		monic: {
 			test: {
-				options: {
-					lineSeparator: require('os').EOL
-				},
-
 				files: {
 					'tmp/test.js': ['test/fixtures/test.js']
 				}
@@ -39,7 +35,6 @@ module.exports = function (grunt) {
 		nodeunit: {
 			tests: ['test/*_test.js']
 		}
-
 	});
 
 	grunt.loadTasks('tasks');

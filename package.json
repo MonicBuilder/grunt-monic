@@ -2,7 +2,7 @@
   "name": "grunt-monic",
   "description": "Using Monic with Grunt.",
   "version": "1.0.3",
-  "homepage": "https://github.com/kobezzza/grunt-monic",
+  "homepage": "https://github.com/MonicBuilder/grunt-monic",
   "author": {
     "name": "kobezzza",
     "email": "kobezzza@mail.ru",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/kobezzza/grunt-monic.git"
+    "url": "git://github.com/MonicBuilder/grunt-monic.git"
   },
   "bugs": {
-    "url": "https://github.com/kobezzza/grunt-monic/issues"
+    "url": "https://github.com/MonicBuilder/grunt-monic/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/kobezzza/grunt-monic/blob/master/LICENSE"
+      "url": "https://github.com/MonicBuilder/grunt-monic/blob/master/LICENSE"
     }
   ],
   "main": "Gruntfile.js",
@@ -28,11 +28,15 @@
   "scripts": {
     "test": "grunt test"
   },
+  "dependencies": {
+    "monic": "^2.0.0"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-nodeunit": "^0.4.1"
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "jscs": "^1.12.0"
   },
   "peerDependencies": {
     "grunt": "^0.4.5"
@@ -40,8 +44,5 @@
   "keywords": [
     "gruntplugin",
     "monic"
-  ],
-  "dependencies": {
-    "monic": "^1.0.0"
-  }
+  ]
 }

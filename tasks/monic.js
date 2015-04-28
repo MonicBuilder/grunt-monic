@@ -1,8 +1,8 @@
 /*
  * grunt-monic
- * https://github.com/kobezzza/grunt-monic
+ * https://github.com/MonicBuilder/grunt-monic
  *
- * Copyright (c) 2014 kobezzza
+ * Copyright (c) 2014-2015 kobezzza
  * Licensed under the MIT license.
  */
 
@@ -10,10 +10,12 @@ var monic = require('monic');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('monic', 'Using Monic', function () {
-		var done = this.async(),
+		var
+			done = this.async(),
 			that = this;
 
-		var i = 0,
+		var
+			i = 0,
 			res = '';
 
 		this.files.forEach(function (f) {
