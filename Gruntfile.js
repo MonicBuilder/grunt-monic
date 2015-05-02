@@ -2,8 +2,8 @@
  * grunt-monic
  * https://github.com/MonicBuilder/grunt-monic
  *
- * Copyright (c) 2014-2015 kobezzza
- * Licensed under the MIT license.
+ * Released under the MIT license
+ * https://github.com/MonicBuilder/grunt-monic/blob/master/LICENSE
  */
 
 module.exports = function (grunt) {

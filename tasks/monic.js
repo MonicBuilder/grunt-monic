@@ -2,8 +2,8 @@
  * grunt-monic
  * https://github.com/MonicBuilder/grunt-monic
  *
- * Copyright (c) 2014-2015 kobezzza
- * Licensed under the MIT license.
+ * Released under the MIT license
+ * https://github.com/MonicBuilder/grunt-monic/blob/master/LICENSE
  */
 
 var monic = require('monic');
@@ -18,23 +18,29 @@ module.exports = function (grunt) {
 			i = 0,
 			res = '';
 
-		this.files.forEach(function (f) {
-			f.src.filter(function (filepath) {
-				if (grunt.file.exists(filepath)) {
+		this.files.forEach(function (file) {
+			file.src.filter(function (src) {
+				if (grunt.file.exists(src)) {
 					return true;
 				}
 
-				grunt.log.warn('Source file "' + filepath + '" not found.');
+				grunt.log.warn('Source file "' + src + '" not found.');
 				return false;
 
-			}).forEach(function (filepath) {
+			}).forEach(function (src) {
 				try {
 					i++;
 
-					var options = that.options();
-					options.content = grunt.file.read(filepath);
+					var opts = that.options();
 
-					monic.compile(filepath, options, function (err, data) {
+					opts.content = grunt.file.read(src);
+					opts.saveFiles = false;
+
+					if (opts.sourceMaps) {
+						opts.file = opts.file || file.dest;
+					}
+
+					monic.compile(src, opts, function (err, data) {
 						if (err) {
 							return grunt.log.error(err.message);
 						}
@@ -43,8 +49,8 @@ module.exports = function (grunt) {
 						res += data;
 
 						if (!i) {
-							grunt.file.write(f.dest, res);
-							grunt.log.writeln('File "' + f.dest + '" created.');
+							grunt.file.write(file.dest, res);
+							grunt.log.writeln('File "' + file.dest + '" created.');
 							done(res);
 						}
 					});
