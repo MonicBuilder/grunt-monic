@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 							return true;
 						}
 
-						grunt.log.warn('Source file "' + src + '" not found.');
+						grunt.log.warn('Source file "' + src + '" not found');
 						return false;
 					}
 				}
@@ -56,7 +56,7 @@ module.exports = function (grunt) {
 							return cb(err);
 						}
 
-						grunt.log.writeln('File "' + params.file + '" created.');
+						grunt.log.writeln('File "' + baseSrc + '" was successfully built -> "' + params.file + '"');
 					});
 
 				} catch (err) {
