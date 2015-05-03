@@ -50,18 +50,13 @@ module.exports = function (grunt) {
 				var params = $C.extend(true, {}, opts, {content: content});
 				params.file = params.file || file.dest;
 
-				try {
-					monic.compile(baseSrc, params, function (err) {
-						if (err) {
-							return cb(err);
-						}
+				monic.compile(baseSrc, params, function (err) {
+					if (err) {
+						return cb(err);
+					}
 
-						grunt.log.writeln('File "' + baseSrc + '" was successfully built -> "' + params.file + '"');
-					});
-
-				} catch (err) {
-					cb(err);
-				}
+					grunt.log.writeln('File "' + baseSrc + '" was successfully built -> "' + params.file + '"');
+				});
 			});
 		});
 
