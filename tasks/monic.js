@@ -1,4 +1,4 @@
-/*
+/*!
  * grunt-monic
  * https://github.com/MonicBuilder/grunt-monic
  *
