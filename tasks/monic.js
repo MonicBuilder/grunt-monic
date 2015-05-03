@@ -51,11 +51,11 @@ module.exports = function (grunt) {
 				params.file = params.file || file.dest;
 
 				monic.compile(baseSrc, params, function (err) {
-					if (err) {
-						return cb(err);
+					if (!err) {
+						grunt.log.writeln('File "' + baseSrc + '" was successfully built -> "' + params.file + '"');
 					}
 
-					grunt.log.writeln('File "' + baseSrc + '" was successfully built -> "' + params.file + '"');
+					cb(err);
 				});
 			});
 		});
