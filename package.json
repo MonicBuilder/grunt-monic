@@ -1,7 +1,7 @@
 {
   "name": "grunt-monic",
   "description": "Using Monic with Grunt.",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "homepage": "https://github.com/MonicBuilder/grunt-monic",
   "author": {
     "name": "kobezzza",
