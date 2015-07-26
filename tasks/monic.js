@@ -62,7 +62,7 @@ module.exports = function (grunt) {
 
 		async.parallel(tasks, function (err) {
 			if (err) {
-				return grunt.log.error(err.message);
+				return grunt.log.error('Monic error: %s. \nFile: %s. \nLine: %s', err.message, err.fileName, err.lineNumber);
 			}
 
 			done();
