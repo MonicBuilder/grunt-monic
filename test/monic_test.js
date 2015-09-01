@@ -1,3 +1,11 @@
+/*!
+ * grunt-monic
+ * https://github.com/MonicBuilder/grunt-monic
+ *
+ * Released under the MIT license
+ * https://github.com/MonicBuilder/grunt-monic/blob/master/LICENSE
+ */
+
 var grunt = require('grunt');
 exports.snakeskin = {
 	setUp: function (done) {
