@@ -4,7 +4,7 @@
   "homepage": "https://github.com/MonicBuilder/grunt-monic",
   "license": "MIT",
   "main": "Gruntfile.js",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "author": {
     "name": "kobezzza",
     "email": "kobezzza@mail.ru",
@@ -28,6 +28,7 @@
     "monic"
   ],
   "dependencies": {
+    "async": "^1.4.2",
     "collection.js": "^5.5.5",
     "monic": "^2.0.0"
   },
