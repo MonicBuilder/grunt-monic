@@ -1,5 +1,5 @@
 [grunt](http://gruntjs.com)-monic
-==================================
+=================================
 
 Using [Monic](https://github.com/MonicBuilder/Monic) with Grunt.
 
