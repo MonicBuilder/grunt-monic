@@ -7,19 +7,14 @@
  */
 
 var
-	$C = require('collection.js').$C;
-
-var
-	monic = require('monic'),
-	async = require('async'),
-	path = require('path');
+	$C = require('collection.js').$C,
+	monic = require('monic');
 
 module.exports = function (grunt) {
 	grunt.registerMultiTask('monic', 'Using Monic', function () {
 		var
 			done = this.async(),
-			opts = $C.extend(true, {}, this.options(), {saveFiles: true, cwd: process.cwd()}),
-			tasks = [];
+			opts = $C.extend(true, {}, this.options(), {saveFiles: true, cwd: process.cwd()});
 
 		$C(this.files).forEach(function (file) {
 			var baseSrc = null;
@@ -46,26 +41,17 @@ module.exports = function (grunt) {
 				}
 			);
 
-			tasks.push(function (cb) {
-				var params = $C.extend(true, {}, opts, {content: content});
-				params.file = params.file || file.dest;
+			var params = $C.extend(true, {}, opts, {content: content});
+			params.file = params.file || file.dest;
 
-				monic.compile(baseSrc, params, function (err) {
-					if (!err) {
-						grunt.log.writeln('File "' + baseSrc + '" was successfully built -> "' + params.file + '"');
-					}
+			monic.compile(baseSrc, params, function (err) {
+				if (err) {
+					return grunt.log.error('Monic error: %s. \nFile: %s. \nLine: %s', err.message, err.fileName, err.lineNumber);
+				}
 
-					cb(err);
-				});
+				grunt.log.writeln('File "' + baseSrc + '" was successfully built -> "' + params.file + '"');
+				done();
 			});
-		});
-
-		async.parallel(tasks, function (err) {
-			if (err) {
-				return grunt.log.error('Monic error: %s. \nFile: %s. \nLine: %s', err.message, err.fileName, err.lineNumber);
-			}
-
-			done();
 		});
 	});
 };
