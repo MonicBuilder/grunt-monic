@@ -11,7 +11,7 @@ Using [Monic](https://github.com/MonicBuilder/Monic) with Grunt.
 ## Install
 
 ```bash
-npm install grunt-monic --save-dev
+npm install monic grunt-monic --save-dev
 ```
 
 ## Usage
