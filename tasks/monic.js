@@ -6,8 +6,7 @@
  * https://github.com/MonicBuilder/grunt-monic/blob/master/LICENSE
  */
 
-var
-	$C = require('collection.js').$C;
+require('core-js/es6/object');
 
 var
 	monic = require('monic'),
@@ -17,7 +16,7 @@ module.exports = function (grunt) {
 	grunt.registerMultiTask('monic', 'Using Monic', function () {
 		var
 			done = this.async(),
-			opts = $C.extend(true, this.options(), {saveFiles: true, cwd: process.cwd()}),
+			opts = Object.assign(this.options(), {saveFiles: true, cwd: process.cwd()}),
 			tasks = [];
 
 		function filter(src) {
@@ -29,7 +28,7 @@ module.exports = function (grunt) {
 			return false;
 		}
 
-		$C(this.files).forEach(function (file) {
+		this.files.forEach(function (file) {
 			var baseSrc = null;
 
 			function reduce(res, src) {
@@ -41,9 +40,9 @@ module.exports = function (grunt) {
 			}
 
 			tasks.push(function (cb) {
-				var params = $C.extend(true, {file: file.dest}, opts,
+				var params = Object.assign({file: file.dest}, opts,
 					{
-						content: $C(file.src).reduce(reduce, '', {filter: filter})
+						content: file.src.reduce(reduce, '', {filter: filter})
 					}
 				);
 
