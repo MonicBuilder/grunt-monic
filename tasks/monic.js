@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 					baseSrc = src;
 				}
 
-				return res += grunt.file.read(src);
+				return res + grunt.file.read(src);
 			}
 
 			tasks.push(function (cb) {
