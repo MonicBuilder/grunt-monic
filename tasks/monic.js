@@ -19,19 +19,15 @@ module.exports = function (grunt) {
 			opts = Object.assign(this.options(), {saveFiles: true, cwd: process.cwd()}),
 			tasks = [];
 
-		function filter(src) {
-			if (grunt.file.exists(src)) {
-				return true;
-			}
-
-			grunt.log.warn('Source file "' + src + '" not found');
-			return false;
-		}
-
 		this.files.forEach(function (file) {
 			var baseSrc = null;
 
 			function reduce(res, src) {
+				if (!grunt.file.exists(src)) {
+					grunt.log.warn('Source file "' + src + '" not found');
+					return res;
+				}
+
 				if (baseSrc === null) {
 					baseSrc = src;
 				}
@@ -42,7 +38,7 @@ module.exports = function (grunt) {
 			tasks.push(function (cb) {
 				var params = Object.assign({file: file.dest}, opts,
 					{
-						content: file.src.reduce(reduce, '', {filter: filter})
+						content: file.src.reduce(reduce, '')
 					}
 				);
 

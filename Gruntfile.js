@@ -8,18 +8,6 @@
 
 module.exports = function (grunt) {
 	grunt.initConfig({
-		jshint: {
-			all: [
-				'Gruntfile.js',
-				'tasks/*.js',
-				'<%= nodeunit.tests %>'
-			],
-
-			options: {
-				jshintrc: '.jshintrc'
-			}
-		},
-
 		clean: {
 			tests: ['tmp']
 		},
@@ -38,11 +26,9 @@ module.exports = function (grunt) {
 	});
 
 	grunt.loadTasks('tasks');
-
-	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
 	grunt.registerTask('test', ['clean', 'monic', 'nodeunit']);
-	grunt.registerTask('default', ['jshint', 'test']);
+	grunt.registerTask('default', ['test']);
 };
