@@ -6,7 +6,7 @@
  * https://github.com/MonicBuilder/grunt-monic/blob/master/LICENSE
  */
 
-require('core-js/es6/object');
+require('core-js');
 
 var
 	monic = require('monic'),
