@@ -6,6 +6,7 @@ Using [Monic](https://github.com/MonicBuilder/Monic) with Grunt.
 [![NPM version](http://img.shields.io/npm/v/grunt-monic.svg?style=flat)](http://badge.fury.io/js/grunt-monic)
 [![NPM dependencies](http://img.shields.io/david/MonicBuilder/grunt-monic.svg?style=flat)](https://david-dm.org/MonicBuilder/grunt-monic)
 [![NPM devDependencies](http://img.shields.io/david/dev/MonicBuilder/grunt-monic.svg?style=flat)](https://david-dm.org/MonicBuilder/grunt-monic?type=dev)
+[![NPM peerDependencies](https://david-dm.org/MonicBuilder/gulp-monic/peer-status.svg)](https://david-dm.org/MonicBuilder/gulp-monic?type=peer)
 [![Build Status](http://img.shields.io/travis/MonicBuilder/grunt-monic.svg?style=flat&branch=master)](https://travis-ci.org/MonicBuilder/grunt-monic)
 
 ## Install
