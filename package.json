@@ -18,7 +18,7 @@
     "url": "https://github.com/MonicBuilder/grunt-monic/issues"
   },
   "engines": {
-    "node": ">= 0.10"
+    "node": ">= 4"
   },
   "scripts": {
     "test": "grunt test"
@@ -28,10 +28,10 @@
     "monic"
   ],
   "dependencies": {
-    "async": "^2.0.0",
-    "core-js": "^2.1.2"
+    "async": "^2.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.0",
     "eslint": "^3.0.0",
     "grunt": "^1.0.0",
     "grunt-contrib-clean": "^1.0.0",
