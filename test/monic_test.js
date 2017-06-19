@@ -6,16 +6,18 @@
  * https://github.com/MonicBuilder/grunt-monic/blob/master/LICENSE
  */
 
-var grunt = require('grunt');
+const
+	grunt = require('grunt');
+
 exports.snakeskin = {
-	setUp: function (done) {
+	setUp(done) {
 		done();
 	},
 
-	test: function (test) {
+	test(test) {
 		test.expect(1);
 
-		var
+		const
 			text = grunt.file.read('tmp/test.js').trim(),
 			expected = grunt.file.read('test/expected/test').trim();
 

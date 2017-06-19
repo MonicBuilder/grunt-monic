@@ -31,8 +31,7 @@
     "async": "^2.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.0",
-    "eslint": "^3.0.0",
+    "eslint": "^4.0.0",
     "grunt": "^1.0.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-nodeunit": "^1.0.0",
