@@ -3,7 +3,7 @@
   "description": "Using Monic with Grunt.",
   "homepage": "https://github.com/MonicBuilder/grunt-monic",
   "main": "Gruntfile.js",
-  "version": "2.0.19",
+  "version": "2.0.20",
   "license": "MIT",
   "author": {
     "name": "kobezzza",
@@ -18,7 +18,7 @@
     "url": "https://github.com/MonicBuilder/grunt-monic/issues"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 8"
   },
   "scripts": {
     "test": "grunt test"
@@ -28,14 +28,14 @@
     "monic"
   ],
   "dependencies": {
-    "async": "^2.0.0"
+    "async": "^2.6.1"
   },
   "devDependencies": {
-    "eslint": "^4.0.0",
-    "grunt": "^1.0.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-nodeunit": "^1.0.0",
-    "monic": "^2.0.0"
+    "eslint": "^5.12.0",
+    "grunt": "^1.0.3",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-nodeunit": "^2.0.0",
+    "monic": "^2.6.0"
   },
   "peerDependencies": {
     "grunt": "*",
