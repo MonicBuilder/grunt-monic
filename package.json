@@ -3,7 +3,7 @@
   "description": "Using Monic with Grunt.",
   "homepage": "https://github.com/MonicBuilder/grunt-monic",
   "main": "Gruntfile.js",
-  "version": "2.0.20",
+  "version": "2.0.21",
   "license": "MIT",
   "author": {
     "name": "kobezzza",
@@ -18,7 +18,7 @@
     "url": "https://github.com/MonicBuilder/grunt-monic/issues"
   },
   "engines": {
-    "node": ">= 8"
+    "node": ">= 12"
   },
   "scripts": {
     "test": "grunt test"
